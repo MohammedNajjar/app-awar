@@ -36,7 +36,7 @@ fun OrderDetailsScreen(navController: NavController, orderId: Int, viewModel: Or
                     }
                 },
                 colors = TopAppBarDefaults.smallTopAppBarColors(
-                    containerColor = Color(0xFF4CAF50),
+                    containerColor = Color(0xFF059372),
                     titleContentColor = Color.White,
                     navigationIconContentColor = Color.White
                 )
@@ -52,7 +52,7 @@ fun OrderDetailsScreen(navController: NavController, orderId: Int, viewModel: Or
                     onClick = { navController.navigate("home") },
                     icon = {
                         Icon(
-                            Icons.Default.ArrowBack, // استبدال الأيقونة بأخرى حديثة
+                            Icons.Default.ArrowBack,
                             contentDescription = "Home"
                         )
                     },

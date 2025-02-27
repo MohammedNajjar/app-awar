@@ -28,7 +28,7 @@ fun ProfileScreen(navController: NavController, viewModel: UserViewModel = viewM
         topBar = {
             CenterAlignedTopAppBar(
                 title = { Text("Profile", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = Color.White) },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = Color(0xFF4CAF50)),
+                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = Color(0xFF059372)),
                 actions = {
                     IconButton(onClick = { /* Settings */ }) {
                         Icon(imageVector = Icons.Default.Settings, contentDescription = "Settings", tint = Color.White)
@@ -67,7 +67,7 @@ fun ProfileScreen(navController: NavController, viewModel: UserViewModel = viewM
         ) {
             // Profile header section
             Column(
-                modifier = Modifier.fillMaxWidth().background(Color(0xFF4CAF50)).padding(bottom = 16.dp),
+                modifier = Modifier.fillMaxWidth().background(Color(0xFF059372)).padding(bottom = 16.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 // Profile image
@@ -77,12 +77,10 @@ fun ProfileScreen(navController: NavController, viewModel: UserViewModel = viewM
 
                 Spacer(modifier = Modifier.height(8.dp))
 
-                // User name and location
                 Text(text = user.name, fontWeight = FontWeight.Bold, fontSize = 20.sp, color = Color.White)
                 Text(text = user.location, fontSize = 14.sp, color = Color.White)
             }
 
-            // Settings options
             Column(modifier = Modifier.fillMaxWidth().padding(16.dp)) {
                 ProfileOption(title = "Favorite", value = "${user.favorites}", showDivider = true)
                 ProfileOption(title = "Language", value = user.language, showDivider = true)
@@ -92,7 +90,6 @@ fun ProfileScreen(navController: NavController, viewModel: UserViewModel = viewM
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // Sign out button
                 Button(
                     onClick = {
                         navController.navigate("login") { popUpTo(0) { inclusive = true } }

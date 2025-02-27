@@ -19,7 +19,6 @@ class LoginViewModel : ViewModel() {
     }
 
     fun login(): Boolean {
-        // In a real app, this would validate credentials
         return _username.value.isNotEmpty() && _password.value.isNotEmpty()
     }
 }

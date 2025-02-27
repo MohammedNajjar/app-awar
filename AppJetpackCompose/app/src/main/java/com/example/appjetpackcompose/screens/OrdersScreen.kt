@@ -21,6 +21,8 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import com.example.appjetpackcompose.data.network.model.Order
 import com.example.appjetpackcompose.data.network.model.Post
+import com.example.appjetpackcompose.ui.theme.secondary
+import com.example.appjetpackcompose.ui.theme.secondary2
 import com.example.appjetpackcompose.viewModel.OrderViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -37,7 +39,7 @@ fun OrdersScreen(navController: NavController, orderViewModel: OrderViewModel = 
             CenterAlignedTopAppBar(
                 title = { Text("Orders") },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color(0xFF4CAF50),
+                    containerColor = Color(0xFF059372),
                     titleContentColor = Color.White
                 )
             )
@@ -120,7 +122,8 @@ fun PostItem(post: Post, onDetailsClick: () -> Unit) {
 
         Text(
             text = "Title: ${post.title}",
-            fontSize = 14.sp
+            fontSize = 14.sp,
+            color = secondary2
         )
 
         Spacer(modifier = Modifier.height(4.dp))
@@ -136,7 +139,7 @@ fun PostItem(post: Post, onDetailsClick: () -> Unit) {
         Button(
             onClick = onDetailsClick,
             modifier = Modifier
-                .fillMaxWidth()
+              .width(158.dp)
                 .height(40.dp),
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color.Black,

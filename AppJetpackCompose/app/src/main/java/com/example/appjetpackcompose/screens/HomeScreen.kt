@@ -24,7 +24,7 @@ import com.example.appjetpackcompose.viewModel.HomeViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(navController: NavController, viewModel: HomeViewModel = viewModel<HomeViewModel>()) { // ✅ تصحيح الاستدعاء
+fun HomeScreen(navController: NavController, viewModel: HomeViewModel = viewModel<HomeViewModel>()) {
     val orders by viewModel.orders.collectAsState()
 
     Scaffold(
